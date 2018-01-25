@@ -4,3 +4,12 @@
 def main():
     print ("Hello, instructor!")
 main()
+
+def main():
+    print ("Hello, instructor!")
+    print ("Good-bye!")
+main()
+
+def main():
+    print ("Did your children study programming in college?")
+main()
