@@ -13,3 +13,11 @@ main()
 def main():
     print ("Did your children study programming in college?")
 main()
+
+def main ():
+    print ("Hey Ally!")
+main ()
+
+def main():
+    print ("Hey Kpop!")
+main()

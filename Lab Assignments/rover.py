@@ -2,6 +2,7 @@
 # Jennifer Gunther
 # 29 January 2018
 
+print ("This program calculates distance in miles")
 def rover ():
     distance = eval(input ("Enter a distance in miles"))
     time = distance / 186000
