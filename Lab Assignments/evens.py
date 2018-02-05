@@ -14,7 +14,9 @@ def evens():
     for i in range(20):
         if i % 2 == 0:
             even_numbers.append(i)
-    print ("Even numbers:", even_numbers)
+    print ("Even numbers:", even_numbers) # JA: It should be 
+
+evens() # JA
     
     
     
