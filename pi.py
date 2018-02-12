@@ -1,6 +1,8 @@
 # Introduction to Programming
 # Jennifer Gunther
 # 4 February 2018
+# JA: You also hd to print the difference between the calculated value and
+# math.pi
 
 print ("This function is going to find the approximate value of pi.")
 
