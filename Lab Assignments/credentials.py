@@ -3,6 +3,9 @@
 # Author: Jennifer Gunther
 # Created: 2018-02-22
 
+# JA: You have a single commit to the repository. It you commit after
+# each step, it is possible to track the changes to the file
+
 #Get the user's first and last name
 def nameDetails():
     first = input("Enter your first name: ")
