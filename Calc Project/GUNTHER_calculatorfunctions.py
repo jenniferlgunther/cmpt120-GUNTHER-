@@ -4,19 +4,27 @@
 
 
 
-#This function adds two numbers 
-def add(x, y):
-   return result
+def add(num1, num2):
+    result = num1 + num2
+    return result
 
-# This function subtracts two numbers 
-def subtract(x, y):
-   return result
+def subtract(num1, num2):
+    result = num1 - num2
+    return result
 
-# This function multiplies two numbers
-def multiply(x, y):
-   return result
+def multiply(num1, num2):
+    result = num1 * num2
+    return result
 
-# This function divides two numbers
-def divide(x, y):
-   return result
+def divide(num1, num2):
+    result = num1 / num2
+    return result
+
+def change_sign(num1):
+    result = (num1 * -1)
+    return result
+
+def square(num1):
+    result = num1 * num1
+    return result
 

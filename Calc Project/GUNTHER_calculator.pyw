@@ -22,9 +22,9 @@ def calcButton(x, y, value):
     button = Rectangle(Point(x,y),Point(x + 80,y + 80))
     button.setFill('lightpink')
     button.draw(win)
-    text.setFace(courier)
-    text.setSize(20)
     text = Text(Point(x + 40, y + 40), value)
+    text.setFace('courier')
+    text.setSize(20)
     text.draw(win)
     return button
 
