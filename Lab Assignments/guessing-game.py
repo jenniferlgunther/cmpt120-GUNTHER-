@@ -15,9 +15,13 @@ def main():
             print("Sorry! Try Again.")
             guess = input("What animal am I thinking of?" '')
             guess = guess.lower()
-
         else:
-            print('Congradulations!')
+            print('Congradulations! Nice job!')
+            next_question = input("Are you a fan of cows? ('y' or 'n') ")
+            if next_question == "y":
+                print ("Awesome! Me too!")
+            else:
+                print ("Oh well. Guess I don't know you as well as I thought.")
             return
         
 
