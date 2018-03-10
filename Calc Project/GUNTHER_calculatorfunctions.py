@@ -28,3 +28,16 @@ def square(num1):
     result = num1 * num1
     return result
 
+def over_x(num1):
+    x = num1
+    result = 1 / x
+    return float (result)
+
+def percent(num1):
+    result = num1 / 100
+    return float (result)
+
+def square_root(num1):
+    result = sqrt(num1)
+    return float (result)
+
