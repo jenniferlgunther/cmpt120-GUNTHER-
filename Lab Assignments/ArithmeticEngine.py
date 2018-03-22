@@ -31,7 +31,9 @@ def doLoop():
             num2 = int(input("Enter the second number: "))
         except:
             print("That input is not valid. Please enter a number")
-            continue
+        if num2 == 0:
+            raise Exception("Unable to divide by zero!")
+        continue
         if cmd == "add":
             result = num1 + num2
         elif cmd == "sub":
@@ -40,6 +42,8 @@ def doLoop():
             result = num1 * num2
         elif cmd == "div":
             result = num1 // num2
+       
+ # will crash because of division by zero
         print("The result is " + str(result) + ".\n")
 
 def main():
