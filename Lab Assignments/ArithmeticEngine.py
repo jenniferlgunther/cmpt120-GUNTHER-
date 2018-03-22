@@ -13,20 +13,34 @@ def showOutro():
 
 def doLoop():
     while True:
-          cmd = input("What computation do you want to perform? ")
-          num1 = int(input("Enter the first number: "))
-          num2 = int(input("Enter the second number: "))
-          if cmd == "add":
-              result = num1 + num2
-          elif cmd == "sub":
-              result = num1 - num2
-          elif cmd == "mult":
-              result = num1 * num2
-          elif cmd == "div":
-              result = num1 // num2
-          elif cmd == "quit":
-              break
-          print("The result is " + str(result) + ".\n")
+        cmd = input("What computation do you want to perform? ")
+        cmd = cmd.lower()
+        duck = False
+        while duck==False:
+            if cmd == "add" or cmd == "sub" or cmd == "mult" or cmd == "div" or cmd == "quit":
+                duck = True
+            else:
+                print(cmd + " is not a valid command.")
+                cmd = input("What computation do you want to perform? ")
+                cmd = cmd.lower()
+        if cmd == "quit":
+            break
+
+        try:
+            num1 = int(input("Enter the first number: "))
+            num2 = int(input("Enter the second number: "))
+        except:
+            print("That input is not valid. Please enter a number")
+            continue
+        if cmd == "add":
+            result = num1 + num2
+        elif cmd == "sub":
+            result = num1 - num2
+        elif cmd == "mult":
+            result = num1 * num2
+        elif cmd == "div":
+            result = num1 // num2
+        print("The result is " + str(result) + ".\n")
 
 def main():
           showIntro()
