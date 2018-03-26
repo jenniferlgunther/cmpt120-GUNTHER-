@@ -25,7 +25,7 @@ def check_button(button, label, x, y):
         return label
     return False
 
-def pressingofthebuttons((answer, entry, operation):
+def pressingofthebuttons(answer, entry, operation):
     if answer == None:
         answer = entry
         entry = 0
@@ -65,7 +65,7 @@ def main():
     buttons.append(create_button (win, 8, 346, 73, 418, "+/-", 'blue'))
     buttons.append(create_button (win, 8, 423, 73, 495, "x2", 'blue'))
     buttons.append(create_button (win, 8, 500, 73, 572, "MC", 'lightgreen'))
-    buttons.append(create_button (win, 8, 577, 73, 649, "M+", 'lightgreen))
+    buttons.append(create_button (win, 8, 577, 73, 649, "M+", 'lightgreen'))
     buttons.append(create_button (win, 81, 115, 146, 187, "8"))
     buttons.append(create_button (win, 81, 192, 146, 264, "5"))
     buttons.append(create_button (win, 81, 269, 146, 341, "2"))
