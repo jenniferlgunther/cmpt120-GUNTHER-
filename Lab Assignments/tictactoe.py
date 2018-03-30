@@ -40,3 +40,30 @@ def printBoard(board):
 def markBoard(board, row, col, player):
     board[row][col]=player
     pass
+
+def getPlayerMove():
+    row = int(input("Please enter a row number."))
+    col = int(input("Please enter a column number."))
+    return (row,col)
+
+def hasBlanks(board):
+    for i in range(3):
+        for k in range(3):
+            if board[i][k]==0:
+                return True
+    return False
+
+def main():
+    board = [
+        (0, 0, 0),
+        (0, 0, 0),
+        (0, 0, 0)]
+    player = 1
+    while hasBlanks(board):
+        printBoard(board)
+        row,col = getPlayerMove()
+        markBoard(board, row, col, player)
+        player = player % 2 + 1
+
+main()
+        
