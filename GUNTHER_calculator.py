@@ -112,43 +112,44 @@ def main():
                        answer = entry
                        displayString = str(answer)
                        entry = 0
-             else:
-                   answer, entry = do_calculation(answer, entry, operation)
-                   operation = None
-                 displayString = str(answer)
+               # JA: Which if should this else match?
+               #else:
+               #    answer, entry = do_calculation(answer, entry, operation)
+               #    operation = None
+               #  displayString = str(answer)
 
-                print ("calculate")
-               elif key in ['+', '-', '/', '*']:
+               # print ("calculate")
+            elif key in ['+', '-', '/', '*']:
                  # do the calculation
                    answer, entry = do_calculation(answer, entry, operation)
                    operation = key
                    displayString = str(answer)
 
-                elif key == '+/-':
+            elif key == '+/-':
                     # do the calculation
                     answer, entry = do_calculation(answer, entry, key)
                     displayString = str(answer)
 
-                elif key == 'C':
+            elif key == 'C':
                     # clear current text
                     displayString = ''
                     answer = None
                     entry = 0
                     operation = None
 
-                else:
+            else:
                     # number keys
                     entry = (entry * 10) + int(key)
                     displayString = str(entry)
 
-                displayTextElement.undraw()
-                displayTextElement = Text(Point(200, 50), displayString)
-                displayTextElement.setFace('arial')
-                displayTextElement.setSize(20)
-                displayTextElement.draw(win)
+                    displayTextElement.undraw()
+                    displayTextElement = Text(Point(200, 50), displayString)
+                    displayTextElement.setFace('arial')
+                    displayTextElement.setSize(20)
+                    displayTextElement.draw(win)
 
 
-                print('answer: %s entry: %s display: %s' % (answer, entry, displayString))
+                    print('answer: %s entry: %s display: %s' % (answer, entry, displayString))
 
 main()
 

@@ -185,6 +185,7 @@ def main():
     memory = 0
     entryString = ''
 
+    # JA: You should move these statements into a function
     while 1 == 1:
         clicked = win.getMouse()
         x = clicked.getX()
