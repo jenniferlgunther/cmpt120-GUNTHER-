@@ -349,14 +349,5 @@ def main():
                 displayTextElement.setSize(20)
                 displayTextElement.draw(win)
 
-                # debug printouts
-                """
-
-                if answer:
-                    print("key: %s answer: %15.3f entry %15.3f" % (key, answer, entry))
-                else:
-                    print("key: %s answer: None     entry %15.3f" % (key, entry))
-                    
-                """
 
 main()
