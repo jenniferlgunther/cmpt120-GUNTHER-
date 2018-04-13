@@ -185,7 +185,6 @@ def main():
     memory = 0
     entryString = ''
 
-    # JA: You should move these statements into a function
     while 1 == 1:
         clicked = win.getMouse()
         x = clicked.getX()
@@ -285,41 +284,22 @@ def main():
                     displayString = '10^' + str(answer)
                     clearNextNumber = True
                     
-                elif key in ['sin', 'cos', 'tan']:
-                    answer, entry = do_calculation(answer, entry, operation)
-                    operation = key
-                    displayString = key + '(' + str(answer) + ')'
-                    clearNextNumber = True
-
-                elif key == 'log':
-                    answer, entry = do_calculation(answer, entry, operation)
-                    operation = key
-                    displayString = key + '(' + str(answer) + ')'
-                    clearNextNumber = True
-                    
-                elif key == 'ln':
-                    answer, entry = do_calculation(answer, entry, operation)
-                    operation = key
-                    displayString = key + '(' + str(answer) + ')'
-                    clearNextNumber = True
-                    
-                elif key == 'sin^-1':
-                    answer, entry = do_calculation(answer, entry, operation)
-                    operation = key
-                    displayString = key + '(' + str(answer) + ')'
-                    clearNextNumber = True
-                                    
-                elif key == 'cos^-1':
-                    answer, entry = do_calculation(answer, entry, operation)
-                    operation = key
-                    displayString = key + '(' + str(answer) + ')'
-                    clearNextNumber = True
-                                    
-                elif key == 'tan^-1':
-                    answer, entry = do_calculation(answer, entry, operation)
-                    operation = key
-                    displayString = key + '(' + str(answer) + ')'
-                    clearNextNumber = True
+                elif key in ['sin', 'cos', 'tan', 'log', 'ln', 'sin^-1', 'cos^-1', 'tan^-1']:
+                     answer, entry = do_calculation(answer, entry, operation)
+                     operation = key
+                     if answer == None:
++                        answer = entry
++                        displayString1 = key + '(' + entryString + ')'
++                        displayString2 = str(answer)
++                        entry = 0
++                        entryString = ''
++                    else:
++                        answer, entry = do_calculation(answer, entry, operation)
++                        operation = None
++                        displayString1 = key + '(' + entryString + ')'
++                        displayString2 = '%20.3f' % (answer)
++
+                     clearNextNumber = True
 
                 elif key == 'x^y':
                     answer, entry = do_calculation(answer, entry, operation)
@@ -368,5 +348,15 @@ def main():
                 displayTextElement.setFace('arial')
                 displayTextElement.setSize(20)
                 displayTextElement.draw(win)
+
+                # debug printouts
+                """
+
+                if answer:
+                    print("key: %s answer: %15.3f entry %15.3f" % (key, answer, entry))
+                else:
+                    print("key: %s answer: None     entry %15.3f" % (key, entry))
+                    
+                """
 
 main()
