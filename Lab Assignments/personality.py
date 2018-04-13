@@ -31,3 +31,40 @@ feelingslist = ["anger", "disgust", "happiness", "sadness", "surprise", "fear"]
 actionslist = ["reward", "punish", "threaten", "joke"]
 reactionlist = ["Grrr! That made me angry!", "Yuck! that is disgusting", "Wooohooo! that made me happy", "Boohoo, you are going to make me cry", "Wow! Very Surprising",  "Now I'm scared"]
 
+ef introduction():
+    print("Hi I'm AI, my name is AL")
+    emotion = random.choice(feelingslist)
+    indexfeeling = feelingslist.index(emotion)
+    print("Today I'm feeling: " + emotion)
+    return indexfeeling
+
+def getInteraction():
+    userAction = input("What do you want to do to Al? (Type either reward, punish, joke or threaten): ")
+    try:
+        userAction = actionslist.index(userAction)
+    except:
+        userAction = 4
+    return userAction
+    
+    
+def lookupEmotion(currEmotion, userAction):
+
+    newemotion = emotionMatrix[currEmotion][userAction]
+    return newemotion
+
+def main():
+    goonforever = True
+    currEmotion = introduction()
+    while goonforever == True:
+        userAction = getInteraction()
+        if userAction == 4:
+            print("Invalid Action")
+            print('\n')
+            continue
+        else:
+            currEmotion = lookupEmotion(currEmotion, userAction)
+            print(reactionlist[currEmotion])
+            print('\n')
+    return
+
+main()
