@@ -19,11 +19,11 @@
 import random
 
 emotionMatrix = [
-    [4, 0, 0. 2]
-    [2, 0, 0, 2]
-    [2, 3, 5, 2]
-    [2, 3, 3, 2]
-    [2, 3, 5, 2]
+    [4, 0, 0, 2],
+    [2, 0, 0, 2],
+    [2, 3, 5, 2],
+    [2, 3, 3, 2],
+    [2, 3, 5, 2],
     [4, 3, 5, 2]
 ]
 
@@ -31,7 +31,7 @@ feelingslist = ["anger", "disgust", "happiness", "sadness", "surprise", "fear"]
 actionslist = ["reward", "punish", "threaten", "joke"]
 reactionlist = ["Grrr! That made me angry!", "Yuck! that is disgusting", "Wooohooo! that made me happy", "Boohoo, you are going to make me cry", "Wow! Very Surprising",  "Now I'm scared"]
 
-ef introduction():
+def introduction():
     print("Hi I'm AI, my name is AL")
     emotion = random.choice(feelingslist)
     indexfeeling = feelingslist.index(emotion)

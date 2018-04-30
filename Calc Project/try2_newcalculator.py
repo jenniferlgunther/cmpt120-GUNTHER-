@@ -3,6 +3,8 @@
 from GUNTHER_calculatorfunctions import *
 from graphics import *
 
+# JA: I'm not sure if this is your latest, but it is not working
+
 # calculator buttons (button, label)
 buttons = []
 
@@ -285,21 +287,21 @@ def main():
                     clearNextNumber = True
                     
                 elif key in ['sin', 'cos', 'tan', 'log', 'ln', 'sin^-1', 'cos^-1', 'tan^-1']:
-                     answer, entry = do_calculation(answer, entry, operation)
-                     operation = key
-                     if answer == None:
-+                        answer = entry
-+                        displayString1 = key + '(' + entryString + ')'
-+                        displayString2 = str(answer)
-+                        entry = 0
-+                        entryString = ''
-+                    else:
-+                        answer, entry = do_calculation(answer, entry, operation)
-+                        operation = None
-+                        displayString1 = key + '(' + entryString + ')'
-+                        displayString2 = '%20.3f' % (answer)
-+
-                     clearNextNumber = True
+                    answer, entry = do_calculation(answer, entry, operation)
+                    operation = key
+                    if answer == None:
+                        answer = entry
+                        displayString1 = key + '(' + entryString + ')'
+                        displayString2 = str(answer)
+                        entry = 0
+                        entryString = ''
+                    else:
+                        answer, entry = do_calculation(answer, entry, operation)
+                        operation = None
+                        displayString1 = key + '(' + entryString + ')'
+                        displayString2 = '%20.3f' % (answer)
+
+                    clearNextNumber = True
 
                 elif key == 'x^y':
                     answer, entry = do_calculation(answer, entry, operation)
